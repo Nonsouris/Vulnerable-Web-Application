@@ -19,10 +19,9 @@ pipeline {
             }
         }
     }
-
     post {
         always {
-            recordIssues enabledForFailure: true, tool: sonarqube()
+            recordIssues enabledForFailure: true, tool: SonarQube()
         }
     }
 }
